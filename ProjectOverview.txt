@@ -1,0 +1,135 @@
+App Name & Purpose
+Name: ASCC Inventory Management
+Purpose: A web application for tracking and managing card inventory stock, specifically designed for banking/financial institutions.
+
+Tech Stack:
+
+Frontend:
+- ReactJS
+- MySQL
+- Shadcn
+- Material UI
+
+Backend:
+- PHP
+- MySQL
+
+User Roles & Access Levels
+Reference: 
+
+User
+1) Admin
+2) OP (Operator)
+3) PO
+4) Logistic Officer
+5) Client
+
+1. Admin
+   - Full system access
+   - Can manage users
+   - Can access reports and analytics
+   - Can manage card inventory
+   - Can verify and approve actions
+
+2. Operator (OP)
+   - Limited operational access
+   - Basic inventory management tasks
+
+3. PO (Purchase Order)
+   - Handles purchase order related tasks
+   - Order management capabilities
+
+4. Logistic Officer
+   - Manages logistics and distribution
+   - Tracks card movements
+
+5. Client
+   - Bank/Financial institution users
+   - Limited view of their own inventory
+   - Basic reporting capabilities
+
+Main Features:
+1. Dashboard System
+- Overview statistics
+- Total reports counter
+- Role-specific views
+- Real-time data visualization
+- Modern UI components
+- Dark/light mode support
+
+2. Report Management
+- Bank-specific reports
+- One report type/template
+- Access control based on user roles
+- Report generation and viewing capabilities
+
+3. Card Inventory Management
+- Track card quantities
+- Bank-specific card management
+- Stock monitoring
+- Stock level management
+- Inventory updates
+- Inventory history tracking
+
+4. Bank Management
+- Bank profile management
+- Bank-specific settings
+- Custom thumbnails for each bank
+- Bank-specific access controls
+
+5. User Management
+- User creation and management (admin only)
+- Role assignment
+- Access control
+- User authentication and authorization
+- Admin: Full system access and user management capabilities
+- Operator (OP): Day-to-day inventory operations
+- Purchase Order (PO): Handling purchase-related activities
+- Logistic Officer: Managing logistics and inventory movement
+- Client: Limited access for viewing relevant inventory information
+
+6. Authentication & Authorization
+- Secure login system
+- Role-based access control
+- Password management including forgot password functionality
+- User profile management
+- No registration allowed, profiles created by admin only
+- Credentials using email and password, set by admin
+
+7. Documentation
+Comprehensive documentation covering:
+- Installation guides
+- User guides
+- Component documentation
+- API documentation
+- Material UI integration details
+
+Key Workflows:
+1. Inventory Management Flow
+- Card stock tracking
+- Inventory updates
+- Stock level monitoring
+- Bank-specific inventory management
+
+2. Reporting Flow
+- Report generation
+- Bank-specific reporting
+- Access control checks
+- Report viewing and management
+
+3. User Management Flow
+- User creation
+- Role assignment
+- Access control
+- Bank association
+
+Design:
+- Focus on a modern, simple, clean, intuitive, and user-friendly interface
+
+Performance:
+- Optimize for fast load times and efficient performance
+- Prioritize responsiveness for optimal performance on both mobile and desktop
+
+Code Quality:
+- Follow best practices for modern web development, such as modular architecture and reusable components
+- Write clean and maintainable code
