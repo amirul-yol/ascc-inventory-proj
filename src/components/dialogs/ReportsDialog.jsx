@@ -4,16 +4,13 @@ import {
   Box, 
   Typography, 
   Grid,
-  Paper,
-  CircularProgress,
   Card,
   CardContent,
   CardMedia,
-  Chip
+  CircularProgress
 } from '@mui/material';
-import { CreditCard as CreditCardIcon } from '@mui/icons-material';
 
-const CardsDialog = ({ onClose = () => {} }) => {
+const ReportsDialog = ({ onClose = () => {} }) => {
   const navigate = useNavigate();
   const [banks, setBanks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,11 +39,10 @@ const CardsDialog = ({ onClose = () => {} }) => {
   }, []);
 
   const handleBankClick = (bankId) => {
-    console.log('Clicking bank with ID:', bankId);
     if (onClose) {
-      onClose(); // Close the dialog only if onClose is provided
+      onClose();
     }
-    navigate(`/banks/${bankId}`); // Navigate to bank details
+    navigate(`/reports/${bankId}`);
   };
 
   if (loading) {
@@ -94,22 +90,10 @@ const CardsDialog = ({ onClose = () => {} }) => {
                 image={bank.imgURL}
                 alt={bank.name}
               />
-              <CardContent sx={{ flex: 1, p: 2 }}>
-                <Typography variant="h6" component="div" sx={{ mb: 1, fontSize: '1rem' }}>
+              <CardContent sx={{ flex: 1, p: 2, display: 'flex', alignItems: 'center' }}>
+                <Typography variant="h6" component="div" sx={{ fontSize: '1rem' }}>
                   {bank.name}
                 </Typography>
-                <Chip
-                  icon={<CreditCardIcon sx={{ fontSize: 16 }} />}
-                  label={`${bank.totalCardType} card types`}
-                  size="small"
-                  sx={{ 
-                    backgroundColor: '#e3f2fd',
-                    color: '#1976d2',
-                    '& .MuiChip-icon': {
-                      color: '#1976d2'
-                    }
-                  }}
-                />
               </CardContent>
             </Card>
           </Grid>
@@ -119,4 +103,4 @@ const CardsDialog = ({ onClose = () => {} }) => {
   );
 };
 
-export default CardsDialog;
+export default ReportsDialog;
